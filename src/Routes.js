@@ -8,6 +8,8 @@ import NotFound from './pages/NotFound'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import AdPage from './pages/AdPage'
+import AddUpdate from './pages/AddsUp'
+import MyAcc from './pages/MyAcc'
 
 export default () => {
     return (
@@ -27,8 +29,11 @@ export default () => {
             <RouterHandler exact path="/ad/:id">
                 <AdPage />
             </RouterHandler>
-            <RouterHandler private exact path="/my-account">
-                <About />
+            <RouterHandler exact path="/my-account">
+                <MyAcc />
+            </RouterHandler>
+            <RouterHandler exact path="/ad/update/:id">
+                <AddUpdate />
             </RouterHandler>
             <RouterHandler path="*">
                 <NotFound />
